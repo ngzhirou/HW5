@@ -1,0 +1,41 @@
+string? name;
+int sex;
+string? gender;
+string? Birthday;
+string? studentNo;
+int isFillingagain;
+isFillingagain = 0;
+while(isFillingagain != 1)
+{
+    Console.Write("Name:");
+    name = Console.ReadLine();
+
+    Console.Write("Gender (1 = male,2 = female):");
+    sex = Convert.ToInt32(Console.ReadLine());
+    if(sex == 1)
+    {
+        gender = "male";
+    }
+    else
+    {
+        gender = "female";
+    }
+
+    Console.Write("Birthday(YYYY/MM/DD):");
+    Birthday = Console.ReadLine();
+
+    Console.Write("Student No.:");
+    studentNo = Console.ReadLine();
+
+    Console.WriteLine("Your name is " + name);
+    Console.WriteLine("Your gender is " + gender);
+    Console.WriteLine("Your brithday is " + Birthday);
+    Console.WriteLine("Your student no. is " + studentNo);
+    Console.Write("Confirm your information press 1 fill in again press 2:" );
+    isFillingagain = Convert.ToInt32(Console.ReadLine());
+
+}
+if (isFillingagain == 1)
+{
+    Console.WriteLine("You have finish your presonal information");
+}
